@@ -1,0 +1,59 @@
+name: officelan_communicator
+description: "Serverless, zero-cost, local-only office intercom system for peer-to-peer HD voice calls, instant messaging, and direct file transfer over LAN."
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # UI & Design
+  flutter_localizations:
+    sdk: flutter
+  google_fonts: ^6.2.1
+  lucide_icons: ^0.257.0
+  intl: ^0.19.0
+  flutter_animate: ^4.5.2
+
+  # State Management
+  flutter_riverpod: ^2.5.1
+  
+  # Local Network Discovery (mDNS / Bonjour)
+  nsd: ^3.0.0
+  network_info_plus: ^6.1.0
+
+  # Direct Peer-to-Peer Voice Calling (Local WebRTC VoIP)
+  flutter_webrtc: ^0.12.3
+  permission_handler: ^11.3.1
+
+  # Local Persistence (Strictly on-device SQLite, zero-cloud)
+  sqflite: ^2.3.3+1
+  path_provider: ^2.1.4
+  path: ^1.9.0
+
+  # Foreground Services & Wake Locks (For receiving calls in Doze Mode)
+  flutter_foreground_task: ^8.1.0
+  wakelock_plus: ^1.2.8
+  audioplayers: ^6.1.0
+  vibration: ^2.0.1
+
+  # Utilities & Serialization
+  uuid: ^4.5.1
+  crypto: ^3.0.6
+  file_picker: ^8.1.6
+  mime: ^2.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/sounds/
+    - assets/icons/
